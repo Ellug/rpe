@@ -1,0 +1,332 @@
+/* COMMON */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 6000px;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px1;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  border-color: #592B18;
+  color: #592B18;
+}
+.btn.btn--brown:hover {
+  background-color: #592B18;
+  color: #FFF;
+}
+.btn.btn--gold {
+  border-color: #D9AA8A;
+  color: #D9AA8A;
+}
+.btn.btn--gold:hover {
+  background-color: #D9AA8A;
+  color: #FFF;
+}
+.btn.btn--white {
+  border-color: #FFF;
+  color: #FFF;
+}
+.btn.btn--white:hover {
+  background-color: #FFF;
+  color: #333;
+}
+
+
+
+/* HEADER */
+header {
+  height: 100px;
+  width: 100%;
+  /* position: relative; */
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+header > .inner {
+  height: 100px;
+}
+header .logo {
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  margin: auto;
+}
+header .logodae {
+  height: 75px;
+}
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+
+}
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+header .sub-menu .search {
+  height: 34px;
+  position: relative;
+}
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing:  border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width .4s;
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #690;
+}
+header .sub-menu .search .material-icons {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .7s;
+}
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
+
+/* ASIDE */
+
+aside {  
+  float: left;
+  display: flex;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #f6f5f0;
+  padding-top: 100px;
+  border: 1px solid #c8c8c8;
+  z-index: 7;
+}
+
+aside .main-menu {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+
+aside .main-menu .item .item__name {
+  padding: 15px 35px 15px 15px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  flex-grow: 0;
+  flex-basis: auto;
+  width: 75px;
+}
+aside .main-menu .item:hover .item__name {
+  background-color: #2C2A29;
+  color: wheat;
+  border-radius: 6px 6px 0 0;
+}
+aside .main-menu .item .item__contents {
+  height: 100%;
+  position: fixed;
+  top: 95px;
+  left: 85px;
+  display: none;
+}
+aside .main-menu .item:hover .item__contents {
+  display: block;
+}
+aside .main-menu .item .item__contents .contents__menu {
+  background-color: #2C2A29;
+  left: 550px;
+  width: 200px;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+aside .main-menu .item .item__contents .contents__menu > ul {
+  padding: 16px 0 16px 5px;
+  display: flex;
+}
+aside .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+aside .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 8px;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+aside .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: rosybrown;
+}
+
+/* SECTION NOTE */
+
+.note {
+  height: 100%;
+  width: auto;
+  display: flex;
+  left: 300px;
+  top: 0px;
+  position: absolute;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+.note .upload {
+  left: 550px;
+}
+
+.note .edit {
+  left: 700px;
+}
+
+.note .delete {
+  left: 850px;
+}
+
+.note .cancel {
+  left: 1000px;
+}
+
+.note .btn {
+  position: fixed;
+
+  bottom: 50px;
+}
+
+.note .alert-box {
+  background: rgb(144, 144, 213);
+  color: red;
+  font-weight: 900;
+  padding: 20px;
+  border-radius: 5px;
+  position: fixed;
+  top: 100px;
+  left: 125px;
+  width: 100%;
+  display: none; /* 숨김 */
+}
+
+.note .alert-button {
+  position: fixed;
+  top: 100px;
+  right: 80px;
+}
+.note .alert-button2 {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+}
+.note .alert-button3 {
+  position: fixed;
+  top: 130px;
+  right: 30px;
+}
+
+
+.note .alert-close {
+  position: fixed;
+  top: 140px;
+  right: 100px;
+}
+
+
+
+
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}
